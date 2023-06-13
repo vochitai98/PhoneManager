@@ -1,0 +1,166 @@
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  :root {
+    font-size: 57%;
+  }
+
+  .header__navbar-list {
+    display: none;
+  }
+  .header__navbar-search {
+    display: none;
+  }
+  .header__navbar {
+    width: 100%;
+  }
+  .header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  .header__navbar-wrap {
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  .header__navbar-more-icon {
+    /* margin-top: 8%; */
+  }
+  .header__navbar-cart {
+    /* width: 200px; */
+    /* flex: 1;
+   height: 80px;
+   justify-content: end;
+   margin-left: 12%; */
+    /* width: 100%; */
+  }
+  .header__navbar-cart-wrap {
+    /* width: 100%; */
+    margin-right: 15px;
+  }
+  .header__navbar-search-mobile {
+    display: block;
+    line-height: 80px;
+    right: 90px;
+    position: absolute;
+    font-size: 2.4rem;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .header__navbar-img {
+    height: 80px;
+  }
+  .header__cart-list {
+    display: none !important;
+  }
+  #slideshow,
+  .slide-wrapper {
+    display: none;
+  }
+  #slideshow-m {
+    display: block;
+    width: 100%;
+  }
+  .slider-img-m {
+    /* width: 100%; */
+    width: 100%;
+
+    height: 500px;
+  }
+  .web__container {
+    margin-top: 70px;
+  }
+  .web__container-voucher-heading {
+    margin-left: 10px;
+  }
+  .web__container-voucher-item {
+  }
+  .web__container-voucher-inner {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+  }
+  .web__container-copy-btn {
+  }
+  .web__container-voucher-item-desc {
+    min-height: 25.18px;
+  } /* Phần product */
+  .item__section-item {
+    display: flex;
+    /* height: 250px;
+      width: 250px; */
+    margin: auto;
+    padding-bottom: 0;
+  }
+
+  .item__section-item-inner {
+    margin: auto;
+    height: 300px;
+    /* margin-right: 8px;
+      margin-left: 8px; */
+  }  .item__section-footer-btn {
+
+    margin-top: 30px;
+
+  }
+  .web__footer{
+    display: none;
+  }
+}
+
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  :root {
+    font-size: 60%;
+  }
+
+  .header__navbar {
+    width: 644px;
+  }
+  .header__navbar-wrap {
+    margin-left: 4px;
+    margin-right: 10px;
+  }
+  .header__navbar-cart-wrap {
+    right: -12px;
+  }
+  .header__navbar-list {
+    display: none;
+  }
+  .item__section-footer-btn {
+
+    margin-top: 40px;
+
+  }
+  .web__footer{
+    display: none;
+  }
+  /* Phần product */
+  /* .item__section-item-img_front,
+  .item__section-item-img_back {
+    width: 203px;
+    height: 203px;
+  }
+  .item__section-item-desc {
+    width: 203px;
+  }
+  .item__section-item {
+    width: 203px;
+  }
+  .item__section-item-img {
+    width: 203px;
+    height: 203px;
+  } */
+}
+/* Mobile và Tablet
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+        
+      }
+} */
+/* @media (min-width: 760px) and (max-width: 1025px) {
+  .header__navbar-wrap {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+} */

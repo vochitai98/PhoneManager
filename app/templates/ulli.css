@@ -1,0 +1,42 @@
+.gia:hover ul {
+  display: block;
+}
+
+.header__navbar-link-menusub {
+  list-style: none;
+  background-color: #fff;
+  display: none;
+}
+.header__navbar-link-menusub a {
+  text-decoration: none;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.gia_li:hover .header__navbar-link-menusub {
+  display: block;
+}
+.hang_li:hover .header__navbar-link-menusub {
+  display: block;
+}
+.hang_li {
+  width: 108px;
+  text-align: center;
+}
+.gia_li {
+  width: 108px;
+  text-align: center;
+}
+.header__navbar-link-menusub li {
+  height: 54px;
+  color: #fff;
+  transition: 0.3s;
+  /* padding: -20px 0; */
+}
+.header__navbar-link-menusub li:hover {
+  background-color: rgb(119, 121, 212);
+}

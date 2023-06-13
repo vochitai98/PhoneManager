@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- css -->
+    <link rel="stylesheet" href="{%static 'app/assets/css/cart.css'%}" />
+    <!-- <link rel="stylesheet" href="{%static 'app/assets/css/detail.css'%}" /> -->
+    <link rel="stylesheet" href="{%static 'app/assets/css/detaill.css'%}" />
+    <link rel="stylesheet" href="{%static 'app/assets/css/style.css'%}" />
+    <link rel="stylesheet" href="{%static 'app/assets/css/base.css'%}" />
+    <link rel="stylesheet" href="{%static 'app/assets/css/grid.css'%}" />
+    <link rel="stylesheet" href="{%static 'app/assets/css/responsive.css'%}" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Detail Product</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="grid wide header__navbar-container">
+        <!-- đt pc -->
+        <div class="row header__navbar-section">
+          <!-- Giao diện thanh navbar   -->
+          <nav class="col header__navbar">
+            <!-- more trên mobile -->
+
+            <!-- trên pc -->
+            <!--  logo -->
+            <div class="header__navbar-img">
+              <a href="{%url 'home'%}" class="header__navbar-logo">
+                <img
+                  src="../../../app/static/app/assets/img/header__logo.png"
+                  alt=""
+                  class="header__navbar-logo-img"
+                />
+              </a>
+            </div>
+            <!-- list navbar  -->
+
+            <!-- giỏ hảng  -->
+            <div class="header__navbar-cart">
+              <!-- nút chính  -->
+              <div class="header__navbar-cart-wrap">
+                <i class="header__navbar-cart-icon fa-solid fa-cart-shopping">
+                </i>
+                <span class="header__navbar-cart-desc"
+                  ><a href="{%url 'cart'%}" style="text-decoration: none"
+                    >Giỏ hàng</a
+                  ></span
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="detail">
+      <h1>Thông tin sản phẩm</h1>
+
+      <div class="content_detail">
+        <div class="content_left_detail">
+          <img src="{{dt.image.url}}" alt="" />
+        </div>
+        <div class="content_right_detail">
+          <div class="ten_detail">{{dt.ten}}</div>
+          <div class="gia_detail">{{dt.gia|floatformat:0}} ₫</div>
+
+          <div class="button">
+            <form method="POST" action="{% url 'add_cart' dt.id %}">
+              {% csrf_token %}
+
+              <button class="button-30" role="button">THÊM VÀO GIỎ</button>
+              <button class="button-30" role="button">MUA NGAY</button>
+              <!-- <button class="button-30" role="button"></button> -->
+            </form>
+          </div>
+          <div class="voucher_detail">
+            <h1>
+              Freeship đơn hàng giá trị trên 8 triệu đồng
+              <!-- <p>đồng</p> -->
+            </h1>
+            <h1>
+              Đổi hàng chưa qua sử dụng trong vòng 30 ngày
+              <!-- <p>30 ngày</p> -->
+            </h1>
+            <!-- <p>Freeship đơn hàng giá trị trên 8 triệu  đồng</p>
+          <p>Đổi hàng chưa qua sử dụng trong  vòng 30 ngày</p> -->
+          </div>
+
+          <div class="chitiet_detail">
+            <h1>THÔNG TIN SẢN PHẨM</h1>
+            <ul class="list_detail">
+              <li class="detail_li xam">
+                <p class="left_li">Màn hình:</p>
+                <p class="right_li">{{dt.manhinh}}</p>
+              </li>
+              <li class="detail_li">
+                <p class="left_li">Camera:</p>
+                <p class="right_li">{{dt.camera}}</p>
+              </li>
+              <li class="detail_li xam">
+                <p class="left_li">CPU:</p>
+                <p class="right_li">{{dt.CPU}}</p>
+              </li>
+              <li class="detail_li ">
+                <p class="left_li">Bộ nhớ trong:</p>
+                <p class="right_li">{{dt.bonhotrong}}</p>
+              </li>
+              <li class="detail_li xam">
+                <p class="left_li">Mô tả:</p>
+                <p class="right_li">{{dt.mota}}</p>
+              </li>
+            </ul>
+            <!-- <p>Màn hình:   {{dt.manhinh}}   </p>
+            <p>Camera:{{dt.camera}}</p>
+            <p>CPU:{{dt.CPU}}</p>
+            <p>Bộ nhớ trong:{{dt.bonhotrong}}</p>
+            <p>Mô tả:{{dt.mota}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
